@@ -23,12 +23,16 @@
         {
             MyDelegate myDelegate;
             int res = 0;
+
             Console.WriteLine("Write first number:");
             int b = int.Parse(Console.ReadLine());
+
             Console.WriteLine("Write second number:");
             int f = int.Parse(Console.ReadLine());
+
             Console.WriteLine("What operation you want to do:+ - / *");
             string a = Console.ReadLine();
+
             switch (a)
             {
                 case "+":
