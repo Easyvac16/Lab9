@@ -1,63 +1,35 @@
 ﻿namespace Lab9
 {
-    public delegate int MyDelegate(int a, int b);
+    
     internal class Program
     {
-        public static int Add(int a, int b)
-        {
-           return a + b;
-        }
-        public static int Substract(int a, int b)
-        {
-            return a - b;
-        }
-        public static int Multiply(int a, int b)
-        {
-            return a * b;
-        }
-        public static int Divide(int a, int b)
-        {
-            return a / b;
-        }
         static void Main()
         {
-            MyDelegate myDelegate;
-            int res = 0;
-
-            Console.WriteLine("Write first number:");
-            int b = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Write second number:");
-            int f = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("What operation you want to do:+ - / *");
-            string a = Console.ReadLine();
-
-            switch (a)
+            Console.OutputEncoding = System.Text.Encoding.Unicode;
+            Console.WriteLine("Виберіть яке завдання запустити 1 - Текстове повідомлення , 2 - Калькулятор , 3 - Перевірка чисел , 4 - Калькулятор через Invoke:");
+            int a = int.Parse(Console.ReadLine());
+            switch(a)
             {
-                case "+":
-                    myDelegate = Add;
-                    res = myDelegate(b,f);
+                case 1:
+                    cs2.task_2();
                     break;
-                case "-":
-                    myDelegate = Substract;
-                    res = myDelegate(b, f);
+                case 2:
+                    cs1.task_1();
                     break;
-                case "*":
-                    myDelegate = Multiply;
-                    res = myDelegate(b, f);
+                case 3:
+                    cs3.task_3();
                     break;
-                case "/":
-                    myDelegate = Divide;
-                    res = myDelegate(b, f);
+                case 4:
+                    cs4.task_4();
                     break;
                 default:
-                    Console.WriteLine("Error...");
+                    Console.WriteLine("Помилка");
                     break;
             }
-            
-            Console.WriteLine( $"Result:{res}");
 
+            
+            
+            
         }
     }
 }
